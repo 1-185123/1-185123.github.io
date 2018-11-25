@@ -345,10 +345,10 @@
 </li>
 <li>查询到的类当中有admin,password,查看里面的数据看看<br><code>sqlmap.py -u &quot;url&quot; --cookie &quot;cookie的值&quot; --dump -T &quot;users&quot; -C &quot;user,password&quot;</code></li>
 <li>然后sqlmap还可以通过数据包了查看是否可以注入，形式为：(1.txt里面为数据包的内容，记得放在与sqlmapt同一目录下)<br><code>sqlmap.py -r &quot;1.txt&quot;</code></li>
-<li>然后在百度的时候看到sqlmap还可以写shell,便试了一下<br><code>sqlmap.py -u &quot;url&quot; --cookie &quot;cookie的值&quot; --os-shell</code><br><img src="/images/02.JPG"></li>
+<li>然后在百度的时候看到sqlmap还可以写shell,便试了一下<br><code>sqlmap.py -u &quot;url&quot; --cookie &quot;cookie的值&quot; --os-shell</code><br><img src="http://1-185123.github.io/images/02.jpg" alt=""></li>
 <li>然后我选择了php</li>
 <li>然后就需要网站的物理路径了，以为是在靶机里做的，我当然知道，所以在实战当中，还需要知道如何爆出网站的物理路径。</li>
-<li>写好路径之后，然后就报错了，没有写入成功，路径弄//转译看下，也是一样，留下没有技术的眼泪，百度了还是一样。<br><img src="/images/03.JPG"></li>
+<li>写好路径之后，然后就报错了，没有写入成功，路径弄//转译看下，也是一样，留下没有技术的眼泪，百度了还是一样。<br><img src="https://1-185123.github.io/images/03.jpg" alt=""></li>
 <li>上面虽然没有执行成功，也提供了一个思路，如果执行成功后，还在网站的目录下生成两个文件，一个是上传的文件，一个是执行cmd的文件，访问上传的文件，把一句话木马文件上传，就可以连菜刀了哇。<h3 id="xss"><a href="#xss" class="headerlink" title="xss"></a>xss</h3>xss主要有放射型、存储型、DOM型，DOM型看了一下，有点难。</li>
 <li>放射型主要是存在于URL当中，我们可以构造恶意代码，诱骗用户点击以达到各种效果，比如可以获取cookie</li>
 <li>检验有没有xss漏洞可以通过下面几种试一下：<blockquote>
